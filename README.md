@@ -29,6 +29,10 @@ With this Dream Journal app, the user will be able to:
 
 * Create a new entry
 * Make a comment, or __Interpretation__ on an entry
+* Interpretations have the following details:
+1) Author
+2) Body
+
 * Edit and Delete entries  
 
 _Further exploration:_
