@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -7,6 +8,11 @@ namespace DreamJournal.Models
     [Table("Entries")]
     public class Entry
     {
+        public Entry()
+        {
+            this.Interpretations = new HashSet<Interpretation>();
+        }
+
         [Key]
         public int EntryId { get; set; }
         public string Title { get; set; }
@@ -20,5 +26,6 @@ namespace DreamJournal.Models
         public string LucidMoment { get; set; }
         public string Tags { get; set; }
         public string SelfAnalysis { get; set; }
+        public virtual ICollection<Interpretation> Interpretations { get; set; }
     }
 }
