@@ -19,5 +19,18 @@ namespace DreamJournal.Controllers
             Entry thisEntry = db.Entries.FirstOrDefault(entries => entries.EntryId == id);
             return View(thisEntry);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Entry entry)
+        {
+            db.Entries.Add(entry);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
