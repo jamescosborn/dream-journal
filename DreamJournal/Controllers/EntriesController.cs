@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DreamJournal.Models;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace DreamJournal.Controllers
 {
@@ -29,6 +30,20 @@ namespace DreamJournal.Controllers
         public IActionResult Create(Entry entry)
         {
             db.Entries.Add(entry);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Edit(int id)
+        {
+            var thisEntry = db.Entries.FirstOrDefault(entries => entries.EntryId == id);
+            return View(thisEntry);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Entry entry)
+        {
+            db.Entry(entry).State = EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
