@@ -10,6 +10,7 @@
     <Folder Include="Controllers\" />
     <Folder Include="Views\" />
     <Folder Include="Views\Entries\" />
+    <Folder Include="Views\Home\" />
   </ItemGroup>
 
   <ItemGroup>

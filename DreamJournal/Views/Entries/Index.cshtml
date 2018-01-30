@@ -1,10 +1,20 @@
-﻿using System;
-namespace DreamJournal.Views.Entries
-{
-	public class Index
-	{
-		public Index()
-		{
-		}
-	}
-}
+﻿@model IEnumerable<DreamJournal.Models.Entry>
+
+<html>
+<head>
+    <title>Dream Journal</title>
+</head>
+<body>
+    <h2>Dream Journal</h2>
+    <ul>
+        @foreach(var listEntry in Model)
+        {
+            <li>
+			@Html.DisplayFor(modelEntry => listEntry.Title) | 
+			@Html.ActionLink("Details", "Details", new { id = listEntry.EntryId })
+			</li>
+			
+        }
+    </ul>
+</body>
+</html>
