@@ -1,0 +1,54 @@
+﻿@model DreamJournal.Models.Entry
+
+<html>
+  <head>
+    <title>Dream Journal Entry - Edit</title>
+  </head>
+  <body>
+    <h2>Edit</h2>
+    <hr />
+    <h4>Edit this entry: @Html.DisplayFor(model => model.Title)</h4>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.EntryId)
+
+        @Html.LabelFor(model => model.Title)
+        @Html.EditorFor(model => model.Title)
+
+        @Html.LabelFor(model => model.Author)
+        @Html.EditorFor(model => model.Author)
+    
+        @Html.LabelFor(model => model.Body)
+        @Html.EditorFor(model => model.Body)
+
+        @Html.LabelFor(model => model.SleepTime)
+        @Html.EditorFor(model => model.SleepTime)
+    
+        @Html.LabelFor(model => model.WakeTime)
+        @Html.EditorFor(model => model.WakeTime)
+
+        @Html.LabelFor(model => model.PreSleepInfo)
+        @Html.EditorFor(model => model.PreSleepInfo)
+
+        @Html.LabelFor(model => model.CatNap)
+        @Html.CheckBox(model => model.CatNap)
+
+        @Html.LabelFor(model => model.WasLucid)
+        @Html.CheckBox(model => model.WasLucid)
+
+        @Html.LabelFor(model => model.LucidMoment)
+        @Html.EditorFor(model => model.LucidMoment)
+
+        @Html.LabelFor(model => model.Tags)
+        @Html.EditorFor(model => model.Tags)
+
+        @Html.LabelFor(model => model.SelfAnalysis)
+        @Html.EditorFor(model => model.SelfAnalysis)
+
+        <input type="submit" value="Save" />
+    }
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+
+  </body>
+</html>
