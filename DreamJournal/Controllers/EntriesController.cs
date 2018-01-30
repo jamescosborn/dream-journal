@@ -2,6 +2,7 @@
 using DreamJournal.Models;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace DreamJournal.Controllers
 {
@@ -44,6 +45,21 @@ namespace DreamJournal.Controllers
         public IActionResult Edit(Entry entry)
         {
             db.Entry(entry).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var thisEntry = db.Entries.FirstOrDefault(entries => entries.EntryId == id);
+            return View(thisEntry);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var thisEntry = db.Entries.FirstOrDefault(entries => entries.EntryId == id);
+            db.Entries.Remove(thisEntry);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
