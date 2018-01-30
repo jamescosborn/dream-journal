@@ -11,7 +11,9 @@
         {
             <li>
 			@Html.DisplayFor(modelEntry => listEntry.Title) | 
-			@Html.ActionLink("Details", "Details", new { id = listEntry.EntryId })
+			@Html.ActionLink("Details", "Details", new { id = listEntry.EntryId }) |
+            @Html.ActionLink("Edit", "Edit", new { id = listEntry.EntryId }) |
+			@Html.ActionLink("Delete", "Delete", new { id = listEntry.EntryId })	
 			</li>
 			
         }
