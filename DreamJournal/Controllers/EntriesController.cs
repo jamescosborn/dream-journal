@@ -13,5 +13,11 @@ namespace DreamJournal.Controllers
             List<Entry> model = db.Entries.ToList();
             return View();
         }
+
+        public IActionResult Details(int id)
+        {
+            Entry thisEntry = db.Entries.FirstOrDefault(entries => entries.EntryId == id);
+            return View(thisEntry);
+        }
     }
 }
