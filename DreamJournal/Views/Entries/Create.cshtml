@@ -1,0 +1,50 @@
+﻿@model DreamJournal.Models.Entry
+
+<html>
+	<head>
+		<title>Dream Journal Entry -- Create</title>
+	</head>
+	<body>
+		<h2>Create</h2>
+		<hr />
+		<h4>Add a new entry</h4>
+		@using (Html.BeginForm())
+		{
+		    @Html.LabelFor(model => model.Title)
+		    @Html.TextBoxFor(model => model.Title)
+
+            @Html.LabelFor(model => model.Author)
+            @Html.TextBoxFor(model => model.Author)
+		
+            @Html.LabelFor(model => model.Body)
+            @Html.TextBoxFor(model => model.Body)
+
+            @Html.LabelFor(model => model.SleepTime)
+            @Html.EditorFor(model => model.SleepTime)
+		
+            @Html.LabelFor(model => model.WakeTime)
+            @Html.EditorFor(model => model.WakeTime)
+
+            @Html.LabelFor(model => model.PreSleepInfo)
+            @Html.TextBoxFor(model => model.PreSleepInfo)
+
+            @Html.LabelFor(model => model.CatNap)
+            @Html.CheckBox(model => model.CatNap)
+
+            @Html.LabelFor(model => model.WasLucid)
+            @Html.CheckBox(model => model.WasLucid)
+
+            @Html.LabelFor(model => model.LucidMoment)
+            @Html.TextBoxFor(model => model.LucidMoment)
+
+            @Html.LabelFor(model => model.Tags)
+            @Html.TextBoxFor(model => model.Tags)
+
+            @Html.LabelFor(model => model.SelfAnalysis)
+            @Html.TextBoxFor(model => model.SelfAnalysis)
+		
+		    <input type="submit" value="Add new entry">
+		}
+		<p>@Html.ActionLink("Back to dream list", "Index")</p>
+	</body>
+</html>
