@@ -37,11 +37,14 @@ namespace DreamJournal
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddConsole();
-
-            if (env.IsDevelopment())
+            app.UseDeveloperExceptionPage();
+            app.UseMvc(routes =>
             {
-                app.UseDeveloperExceptionPage();
-            }
+                routes.MapRoute(name: "default",
+                                 template: "{controller=Home}/{action=Index}/{id?}");
+            });
+
+
 
             app.Run(async (context) =>
             {
