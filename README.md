@@ -15,23 +15,24 @@ With this Dream Journal app, the user will be able to:
 
 * View a list of all __Entries__
 * View details for an entry:   
-1) Author  
-2) Body  
-3) Approx. Sleep Time  
-4) Approx. Waking Time  
-5) What Were You Doing Before Sleep  
-6) Cat Nap (bool)  
-7) Experienced Lucidity (bool)  
-8) Moment of Lucidity  
-9) Tags  
-10) Self-Analysis  
+  * Author  
+  * Body  
+  * Approx. Sleep Time  
+  * Approx. Waking Time  
+  * What Were You Doing Before Sleep  
+  * Cat Nap (bool)  
+  * Experienced Lucidity (bool)  
+  * Moment of Lucidity  
+  * Tags  
+  * Self-Analysis  
 
 
 * Create a new entry
 * Make a comment, or __Interpretation__ on an entry
-* Interpretations have the following details:
-1) Author
-2) Body
+* Interpretations have the following details:  
+  * Author  
+  * Body
+
 
 * Edit and Delete entries  
 
