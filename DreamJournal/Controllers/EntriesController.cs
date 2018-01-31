@@ -13,7 +13,7 @@ namespace DreamJournal.Controllers
         public IActionResult Index()
         {
             List<Entry> model = db.Entries.ToList();
-            return View();
+            return View(model);
         }
 
         public IActionResult Details(int id)

@@ -3,6 +3,7 @@
     <title>Dream Journal</title>
 </head>
 <body>
-    <h2>test</h2>
+@model IEnumerable<DreamJournal.Models.Entry> 
+    <h2>Dream Journal</h2>     <p>@Html.ActionLink("Dream list", "Index", "Entries")</p> 
 </body>
 </html>

@@ -10,38 +10,38 @@
 		<h4>Add a new entry</h4>
 		@using (Html.BeginForm())
 		{
-		    @Html.LabelFor(model => model.Title)
-		    @Html.TextBoxFor(model => model.Title)
+		    <p>@Html.LabelFor(model => model.Title)
+		    @Html.TextBoxFor(model => model.Title)</p>
 
-            @Html.LabelFor(model => model.Author)
-            @Html.TextBoxFor(model => model.Author)
+            <p>@Html.LabelFor(model => model.Author)
+            @Html.TextBoxFor(model => model.Author)</p>
 		
-            @Html.LabelFor(model => model.Body)
-            @Html.TextBoxFor(model => model.Body)
+            <p>@Html.LabelFor(model => model.Body)
+            @Html.TextBoxFor(model => model.Body)</p>
 
-            @Html.LabelFor(model => model.SleepTime)
-            @Html.EditorFor(model => model.SleepTime)
+            <p>@Html.LabelFor(model => model.SleepTime)
+            @Html.EditorFor(model => model.SleepTime)</p>
 		
-            @Html.LabelFor(model => model.WakeTime)
-            @Html.EditorFor(model => model.WakeTime)
+            <p>@Html.LabelFor(model => model.WakeTime)
+            @Html.EditorFor(model => model.WakeTime)</p>
 
-            @Html.LabelFor(model => model.PreSleepInfo)
-            @Html.TextBoxFor(model => model.PreSleepInfo)
+            <p>@Html.LabelFor(model => model.PreSleepInfo)
+            @Html.TextBoxFor(model => model.PreSleepInfo)</p>
 
-            @Html.LabelFor(model => model.CatNap)
-            @Html.CheckBox(model => model.CatNap)
+            <p>@Html.LabelFor(model => model.CatNap)
+            @Html.CheckBoxFor(model => model.CatNap)</p>
 
-            @Html.LabelFor(model => model.WasLucid)
-            @Html.CheckBox(model => model.WasLucid)
+            <p>@Html.LabelFor(model => model.WasLucid)
+            @Html.CheckBoxFor(model => model.WasLucid)</p>
 
-            @Html.LabelFor(model => model.LucidMoment)
-            @Html.TextBoxFor(model => model.LucidMoment)
+            <p>@Html.LabelFor(model => model.LucidMoment)
+            @Html.TextBoxFor(model => model.LucidMoment)</p>
 
-            @Html.LabelFor(model => model.Tags)
-            @Html.TextBoxFor(model => model.Tags)
+            <p>@Html.LabelFor(model => model.Tags)
+            @Html.TextBoxFor(model => model.Tags)</p>
 
-            @Html.LabelFor(model => model.SelfAnalysis)
-            @Html.TextBoxFor(model => model.SelfAnalysis)
+            <p>@Html.LabelFor(model => model.SelfAnalysis)
+            @Html.TextBoxFor(model => model.SelfAnalysis)</p>
 		
 		    <input type="submit" value="Add new entry">
 		}
