@@ -14,5 +14,9 @@
 
 .biggerText {
     height: 200px;
-    width: 800px;
+    width: 500px;
+}
+
+.normalText {
+    width: 500px;
 }
