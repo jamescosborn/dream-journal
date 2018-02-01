@@ -1,4 +1,4 @@
-# Dream Journal
+# Dream Scanner
 
 ![Morpheus Dream, from Neil Gaiman's Sandman series](https://nerdist.com/wp-content/uploads/2017/04/663307.jpg)
 
