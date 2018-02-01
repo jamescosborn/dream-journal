@@ -51,11 +51,10 @@ To start the website, you'll need the following:
 ### Installation Steps
 
 1. In your command prompt, enter:  
-  `git clone https://github.com/jamescosborn/jco-portfolio.git`
+  `git clone https://github.com/jamescosborn/dream-scanner.git`
 2. Start your SQL server on MAMP.
 3. Navigate to the folder with the .csproj in it and enter:   
-`dotnet restore`  
-`dotnet ef migrations add CodeReview`     
+`dotnet restore`    
 `dotnet ef database update`  
 4. Enter:  `dotnet run`
 5. In a web browser, navigate to http://localhost:5000 (if the command prompt displays a different local host number, enter that one)
@@ -64,7 +63,6 @@ To start the website, you'll need the following:
 
 GitBash  
 GitHub   
-GitHub API  
 Atom   
 C#  
 .NET Core (v1.1)  
@@ -72,44 +70,43 @@ Visual Studio 2017
 
 ## Scheduled Updates
 
-* Styling of Blog posts, index and details
-* Add Email/GitHub/LinkedIn icons
-* Further style landing page
-* Get a new profile picture  
-* Display more info for Top Starred Repos: commits?
-* Style nav bar
-* Bug fixes
+* Styling of Views/Entries/Details.cshtml  
+* Add Interpretations (CRUD)
+* Add User login
+* Add User roles, admin role
+* Admin can Delete individual Interpretations
+* User can only edit and delete their own Entries and Interpretations
+* Update AsleepTime and WakeTime from strings to DateTimes
+* Method for finding TimeAsleep from comparing AsleepTime and WakeTime
+* Method for applying CatNap based on AsleepTime (<1 hour, remove CatNap bool from Entry object)
+* Search method for Tags
+* __Implement Twitter API to tweet out Dream Summaries!__
+
 
 ## Known Bugs
 
-* Microsoft.AspNetCore.Mvc.Rendering.MvcForm appears on Admin page next to Logout button
+* line break becomes off center when resizing the browser window on Views/Entries/Create  
+* Edit method for Entries is non-functional  
 
 ## Contributors
 
-James Carl Osborn
+James Carl Osborn  
 jamescarlosborn@gmail.com  
 
 ## Project Specs
 
 | Description        | Input           | Output  |
 | ------------- |:-------------:| -----:|
-| User is greeted with a landing page, where they see __a picture__       | localhost:5000       | User sees landing page    |
-| User can navigate to a blog section with a collection of __blog posts__       | Clicks "Blogs"       | User is shown all blog posts    |
-| Clicking on a blog post, the user will see all the blog's specific __comments__       | Clicks "Post A"       | User sees all comments of "Post A"    |
-| User is able to log on/off as an administrator | Clicks "Admin" | User is logged in if they have the credentials |
-| Only admins can Create, Read, Update, Delete posts | Create a new blog post | Blog post is added to list |
-| Only admins are able to remove Comments | Remove comment from blog post | Comment no longer appears on post |
-| Projects section displays the top 3 starred GitHub repos | Clicks "Projects" | The top 3 starred GitHub repos for JCO are displayed  |
+| User is greeted with a landing page       | localhost:5000       | User sees landing page    |
+| User can navigate to a blog section with a collection of dream scanner __entries__       | Clicks "Enter/View List"       | User is shown all dream scanner entries    |
+| Clicking on an entry, the user will see all the entry's specific dream __interpretations__       | Clicks "Entry A"       | User sees all interpretations of "Entry A"    |
+| User can log a new entry | Clicks "Create new entry" | User inputs their dream to be saved in the list |
 
 ## Technical Specs
--Ajax required for GET methods on Post CRUD
+-blank, placeholder for future
 
 ## Developer Notes  
-For info on API calls to starred repos:   
--https://developer.github.com/v3/activity/starring/  
-
-For info on API call parameters:  
--https://developer.github.com/v3/#parameters  
+-none right now
 
 ## Sources
 
