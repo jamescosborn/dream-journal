@@ -27,5 +27,6 @@ namespace DreamJournal.Models
         public string Tags { get; set; }
         public string SelfAnalysis { get; set; }
         public virtual ICollection<Interpretation> Interpretations { get; set; }
+
     }
 }

@@ -7,15 +7,24 @@
 
 <h2>Dream Journal</h2>
 <ul>
-    @foreach(var listEntry in Model)
-    {
-        <li>
-		@Html.DisplayFor(modelEntry => listEntry.Title) | 
-		@Html.ActionLink("Details", "Details", new { id = listEntry.EntryId }) |
-        @Html.ActionLink("Edit", "Edit", new { id = listEntry.EntryId }) |
-		@Html.ActionLink("Delete", "Delete", new { id = listEntry.EntryId })	
-		</li>
-		
-    }
+	@if (!Model.Any() )
+	{
+	    <br />
+        <h4>No entries yet -- get to dreaming!</h4>
+	    <br />
+	}
+	else
+	{
+        foreach(var listEntry in Model)
+        {
+            <li>
+    		@Html.DisplayFor(modelEntry => listEntry.Title) | 
+    		@Html.ActionLink("Details", "Details", new { id = listEntry.EntryId }) |
+            @Html.ActionLink("Edit", "Edit", new { id = listEntry.EntryId }) |
+    		@Html.ActionLink("Delete", "Delete", new { id = listEntry.EntryId })	
+    		</li>
+    		
+        }
+	}
 </ul>
 <p>@Html.ActionLink("Add new entry", "Create")</p>

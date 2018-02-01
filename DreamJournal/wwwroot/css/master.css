@@ -20,3 +20,26 @@
 .normalText {
     width: 500px;
 }
+
+.bannerAlign {
+    height: 10em;
+    position: relative;
+    text-align: center;
+}
+
+.scanner {
+    font-family: 'Libre Barcode 39 Text', cursive;
+    color: limegreen;
+    font-size: 500%;
+    text-align: center;
+    margin-top: 200px;
+    margin-right: 100px;
+}
+
+.enterAlign {
+    margin-top: 50px;
+    margin-right: 110px;
+    font-size: 150%;
+}
+
+

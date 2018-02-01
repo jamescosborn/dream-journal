@@ -4,4 +4,7 @@
 }
 
 @model IEnumerable<DreamJournal.Models.Entry> 
-    <h2>Dream Journal</h2>     <p>@Html.ActionLink("Dream list", "Index", "Entries")</p> 
+    <div class="bannerAlign">
+        <h1 class="scanner">Dream Scanner</h1>
+	    <p class="enterAlign">@Html.ActionLink("Enter", "Index", "Entries")</p>
+	</div> 
