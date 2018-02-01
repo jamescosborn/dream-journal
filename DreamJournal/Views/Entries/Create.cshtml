@@ -6,44 +6,46 @@
 @model DreamJournal.Models.Entry
 
 <body>
-		<h2>Log your dream</h2>
-		<hr />
+	<div class="centerer">
+		<h1 class="megaLabel">Log your dream</h1>
+		<hr class="normalBreak">
 		@using (Html.BeginForm())
 		{
-		    <p>@Html.LabelFor(model => model.Title)</p>
+		    <p class="createLabel">@Html.LabelFor(model => model.Title)</p>
 	        <p>@Html.TextBoxFor(model => model.Title, new {@class="normalText"})</p>
 	
-            <p>@Html.LabelFor(model => model.Author)</p>
-	        <p>@Html.TextBoxFor(model => model.Author)</p>
+            <p class="createLabel">@Html.LabelFor(model => model.Author)</p>
+	        <p>@Html.TextBoxFor(model => model.Author, new {@class="normalText"})</p>
 	
-            <p>@Html.LabelFor(model => model.Body)</p>
+            <p class="createLabel">@Html.LabelFor(model => model.Body)</p>
 	        <p>@Html.TextAreaFor(model => model.Body, new {@class="biggerText textBox"})</p>
 
-            <p>@Html.LabelFor(model => model.SleepTime)</p>
-            <p>@Html.EditorFor(model => model.SleepTime)</p>
+            <p class="createLabel">@Html.LabelFor(model => model.SleepTime)</p>
+            <p>@Html.TextBoxFor(model => model.SleepTime, new {@class="normalText"})</p>
 		
-            <p>@Html.LabelFor(model => model.WakeTime)</p>
-            <p>@Html.EditorFor(model => model.WakeTime)</p>
+            <p class="createLabel">@Html.LabelFor(model => model.WakeTime)</p>
+            <p>@Html.TextBoxFor(model => model.WakeTime, new {@class="normalText"})</p>
 
-            <p>@Html.LabelFor(model => model.PreSleepInfo)</p>
+            <p class="createLabel">@Html.LabelFor(model => model.PreSleepInfo)</p>
             <p>@Html.TextBoxFor(model => model.PreSleepInfo, new {@class="normalText"})</p>
 
-            <p>@Html.LabelFor(model => model.CatNap)
+            <p class="createLabel">@Html.LabelFor(model => model.CatNap)
                 @Html.CheckBoxFor(model => model.CatNap)</p>
 
-            <p>@Html.LabelFor(model => model.WasLucid)
+            <p class="createLabel">@Html.LabelFor(model => model.WasLucid)
             @Html.CheckBoxFor(model => model.WasLucid)</p>
 
-            <p>@Html.LabelFor(model => model.LucidMoment)</p>
+            <p class="createLabel">@Html.LabelFor(model => model.LucidMoment)</p>
             <p>@Html.TextBoxFor(model => model.LucidMoment, new {@class="normalText"})</p>
 
-            <p>@Html.LabelFor(model => model.Tags)</p>
+            <p class="createLabel">@Html.LabelFor(model => model.Tags)</p>
             <p>@Html.TextBoxFor(model => model.Tags, new {@class="normalText"})</p>
 
-            <p>@Html.LabelFor(model => model.SelfAnalysis)</p>
+            <p class="createLabel">@Html.LabelFor(model => model.SelfAnalysis)</p>
             <p>@Html.TextBoxFor(model => model.SelfAnalysis, new {@class="normalText"})</p>
 		
 		    <input class="button" type="submit" value="Add new entry">
 		}
 		<p>@Html.ActionLink("Back to dream list", "Index")</p>
+	</div>
 </body>

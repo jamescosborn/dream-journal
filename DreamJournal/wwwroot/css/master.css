@@ -19,6 +19,12 @@
 
 .normalText {
     width: 500px;
+    color: black;
+}
+
+.normalBreak {
+    width: 500px;
+    margin-right: 220px;
 }
 
 .bannerAlign {
@@ -33,13 +39,30 @@
     font-size: 500%;
     text-align: center;
     margin-top: 200px;
-    margin-right: 100px;
 }
 
 .enterAlign {
     margin-top: 50px;
-    margin-right: 110px;
     font-size: 150%;
 }
 
+.createLabel {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 150%;
+    color: limegreen;
+}
 
+.megaLabel {
+    font-family: 'Aldrich', sans-serif;
+    font-size: 250%;
+    color: limegreen;
+}
+
+.bgColorTest {
+    background-color: green;
+}
+
+.centerer {
+    margin: auto;
+    width: 50%
+}
