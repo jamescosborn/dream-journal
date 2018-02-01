@@ -1,9 +1,7 @@
-﻿<html>
-<head>
-    <title>Dream Journal</title>
-</head>
-<body>
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
 @model IEnumerable<DreamJournal.Models.Entry> 
     <h2>Dream Journal</h2>     <p>@Html.ActionLink("Dream list", "Index", "Entries")</p> 
-</body>
-</html>

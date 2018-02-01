@@ -1,23 +1,21 @@
-﻿@model IEnumerable<DreamJournal.Models.Entry>
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-<html>
-<head>
-    <title>Dream Journal</title>
-</head>
-<body>
-    <h2>Dream Journal</h2>
-    <ul>
-        @foreach(var listEntry in Model)
-        {
-            <li>
-			@Html.DisplayFor(modelEntry => listEntry.Title) | 
-			@Html.ActionLink("Details", "Details", new { id = listEntry.EntryId }) |
-            @Html.ActionLink("Edit", "Edit", new { id = listEntry.EntryId }) |
-			@Html.ActionLink("Delete", "Delete", new { id = listEntry.EntryId })	
-			</li>
-			
-        }
-    </ul>
-	<p>@Html.ActionLink("Add new entry", "Create")</p>
-</body>
-</html>
+@model IEnumerable<DreamJournal.Models.Entry>
+
+<h2>Dream Journal</h2>
+<ul>
+    @foreach(var listEntry in Model)
+    {
+        <li>
+		@Html.DisplayFor(modelEntry => listEntry.Title) | 
+		@Html.ActionLink("Details", "Details", new { id = listEntry.EntryId }) |
+        @Html.ActionLink("Edit", "Edit", new { id = listEntry.EntryId }) |
+		@Html.ActionLink("Delete", "Delete", new { id = listEntry.EntryId })	
+		</li>
+		
+    }
+</ul>
+<p>@Html.ActionLink("Add new entry", "Create")</p>

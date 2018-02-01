@@ -38,6 +38,7 @@ namespace DreamJournal
         {
             loggerFactory.AddConsole();
             app.UseDeveloperExceptionPage();
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(name: "default",
