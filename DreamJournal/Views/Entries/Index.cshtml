@@ -4,9 +4,11 @@
 }
 
 @model IEnumerable<DreamJournal.Models.Entry>
-
-<h2>Dream Journal</h2>
-<ul>
+<div class="centerer">
+<div class="main">
+<br />
+<h2 class="megaLabel">Dream List</h2>
+<br />
 	@if (!Model.Any() )
 	{
 	    <br />
@@ -26,5 +28,7 @@
     		
         }
 	}
-</ul>
+<br />
 <p>@Html.ActionLink("Add new entry", "Create")</p>
+</div>
+</div>
