@@ -3,3 +3,16 @@
     margin-left: 100px;
     color: white;
 }
+
+.button {
+    color: black;
+}
+
+.textBox {
+    color: black;
+}
+
+.biggerText {
+    height: 200px;
+    width: 800px;
+}
